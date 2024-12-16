@@ -9,8 +9,10 @@
 
 #### 2. 언리얼 엔진 실행 및 환경 둘러보기 (5.5.1 버전, unreal learning kit 에셋 프로젝트) <br>
 - [x] 에디터(편집기) 살펴보기 <br>
-![image](https://github.com/user-attachments/assets/52559e63-590a-4d07-8f9e-73d002f553d0)
   1) 상단 메뉴바 <br><br>
+    &emsp;&emsp;&emsp;&emsp; A  &emsp;&emsp; B &emsp;&emsp; C &emsp;&emsp;&emsp; D &emsp;&emsp; E &emsp;&emsp;&ensp;&nbsp; F &emsp;&emsp;&nbsp; G &emsp;&emsp; H <br>
+  ![image](https://github.com/user-attachments/assets/9ad4c328-9a52-498d-88d7-4e556c8e9f7c)
+
     A. 파일 <br>
     &ensp; 신규 프로젝트, 라벨 생성 및 에셋 적용, 외부 임포트 등의 기능이 있다. <br><br>
     B. 편집 <br>
@@ -29,6 +31,8 @@
     &ensp; 공식문서, 커뮤니티 등에 접근하여 다양한 정보를 탐색할 수 있다. <br>
 
   2) 월드 아웃라이너 <br><br>
+  ![image](https://github.com/user-attachments/assets/fced11a8-e083-4bd1-8a30-8f07ade484c1)
+
   > 월드(레벨)에 포함된 모든 오브젝트를 **계층적으로** 표시해주는 도구다. <br>
   > 오브젝트를 선택 및 정렬하고 검색하는것에 있어 유용하게 사용할 수 있다. 정도로 이해하면 될 것 같다. <br>
   > > ```
@@ -40,6 +44,8 @@
   > > ```
   
   3) 디테일 <br><br>
+  ![image](https://github.com/user-attachments/assets/8b70bb33-e3e7-4a27-a66a-f7b973f02a43)
+
   > 아웃라이너에서 선택한 액터의 세부 속성이 표시되는 공간.
   > 복잡한 오브젝트 및 블루프린트 액터에 대한 **개별 컴포넌트 속성**을 관리할 수 있다.
   > > 예시 1) 액터의 위치(*Location*), 회전(*Rotataion*), 크기(*Scale*) 속성 설정 및 관리 **(트랜스폼 속성)** <br>
@@ -53,7 +59,10 @@
 
 #### 3. 공식 문서 및 커뮤니티 자료 찾아보기. <br>
 - [x] 언리얼 엔진 공식 문서 둘러보기
-> 주소: https://dev.epicgames.com/documentation/ko-kr/unreal-engine/whats-new?application_version=5.5
+> 주소: https://dev.epicgames.com/documentation/ko-kr/unreal-engine/whats-new?application_version=5.5 <br>
+> 언리얼 엔진 5.5 문서 > 버츄얼 월드 제작 > 무작정 따라해보기!
+> > 툴과 해당 툴이 하는 역할, 액터에 미칠 수 있는 영향을 모르는 채 시작하니 따라하는 것 조차 난관이 많았다. <br>
+> > 문서의 '기초 지식' 카테고리부터 차근차근 읽어봐야겠다는 확신을 가질 수 있었다.
 
 #### 4. 공식 유튜브 채널 혹은 커뮤니티 살펴보기. <br>
 - [x] 언리얼 엔진 유튜브 채널 방문하기
