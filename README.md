@@ -53,7 +53,7 @@
 
 #### 3. 공식 문서 및 커뮤니티 자료 찾아보기. <br>
 - [x] 언리얼 엔진 공식 문서 둘러보기
-> 주소: https://dev.epicgames.com/documentation/ko-kr/unreal-engine/unreal-engine-5-4-documentation?application_version=5.4
+> 주소: https://dev.epicgames.com/documentation/ko-kr/unreal-engine/whats-new?application_version=5.5
 
 #### 4. 공식 유튜브 채널 혹은 커뮤니티 살펴보기. <br>
 - [x] 언리얼 엔진 유튜브 채널 방문하기
