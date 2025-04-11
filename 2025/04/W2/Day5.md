@@ -1,4 +1,4 @@
-# 2025_04_11 WIL
+# 2025_04_11
 
 프로젝트 명 : Super Smash Animals
 
