@@ -75,4 +75,41 @@ Navigation System -> Generate Navigation Only arounds Navigation Invokers -> **T
 ![image](https://github.com/user-attachments/assets/66e78d75-ae47-49d0-b167-65ab77794d58)
 ![image](https://github.com/user-attachments/assets/40da9529-3e8b-496f-b05d-713a2ffb5913)
 ![image](https://github.com/user-attachments/assets/9d5a9e6c-75ff-41c5-b17b-89223fa9743d)
+이후에는 캐릭터 C++ 클래스를 수정해주자. ~~차마 코드 전문은 가져오기가 좀 그래서..~~ ~~다른건 괜찮고?~~ <br>
+![image](https://github.com/user-attachments/assets/c4ef44f3-1fb9-40fc-8d15-9b94885ac1db)
+![image](https://github.com/user-attachments/assets/25885a59-83aa-4c63-9cb6-0223e21efe29)
+
+여기까지 하면 AI의 MoveTo를 활용, Nav Modifier를 임의로 배치하여 AI의 이동경로를 임의로 변경하는 테스트를 진행해 볼 수 있다. <br.
+
+여기서 잠깐. AI의 MoveToLocation 함수에 대해 보다 자세히 알아보는 시간을 가져보자. <br>
+```ruby
+EPathFollowingRequestResult::Type MoveToLocation(
+const FVector& Dest,
+float AcceptanceRadius = -1,
+bool bStopOnOverlap = true,
+bool bUsePathfinding = true,
+bool bProjectDestinationToNavigation = true,
+bool bCanStrafe = false,
+TSubclassOf<UNavigationQueryFilter> FilterClass = nullptr,
+bool bAllowPartialPath = true
+);
+```
+- **Dest**: 이동할 목적지 위치 벡터
+- **AcceptanceRadius**: AI가 목적지에 도달했다고 판단할 거리 (값이 클수록 더 멀리서 "도착" 처리)
+- **bStopOnOverlap**: 목적지와 캐릭터의 충돌 영역이 겹치면 도착으로 간주할지 여부
+- **bUsePathfinding**: 경로 탐색 알고리즘을 사용할지 여부 (false면 직선으로 이동 시도)
+- **bProjectDestinationToNavigation**: 목적지를 네비게이션 메시에 투영할지 여부
+- **bCanStrafe**: AI가 측면 이동을 할 수 있는지 여부
+- **FilterClass**: 네비게이션 쿼리에 사용할 필터 클래스
+- **bAllowPartialPath**: 완전한 경로를 찾지 못할 경우 부분 경로라도 허용할지 여부 <br>
+
+※※ C++에서는 함수의 필수 파라미터가 아닌 경우 임의 누락이 가능하며 누락된 경우 함수원형의 기본값이 사용된다. <br>
+
+아하. 그렇다면 MoveToActor는 이와 어떤 차이가 있는걸까? <br>
+
+**공통점:** AI가 특정 오브젝트로 “이동”하게 만드는 함수다.
+**차이점:** 타겟 오브젝트가 Actor냐 Location이냐의 차이가 있다. Actor를 타겟 오브젝트로 삼느냐, Location(특정위치)를 타겟 오브젝트로 삼느냐가 핵심 차이점이며 Actor의 경우 Actor가 실시간으로 이동하면 추적이 가능하고, Location의 경우 특정 좌표로만 이동한다. <br>
+
+Actor의 경우 Location을 실시간으로 업데이트하는 방식을 사용하기 때문에 이러한 측면에서 **연산 비용**이 조금 더 발생한다는 차이가 있다고 한다. <br>
+~~알아만 두자~~ <br>
 
